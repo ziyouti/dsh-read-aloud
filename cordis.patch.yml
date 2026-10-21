@@ -1,0 +1,3 @@
+- insert:
+    - id: read-aloud
+      name: 'dsh-read-aloud-neural'

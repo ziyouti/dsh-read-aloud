@@ -1,0 +1,50 @@
+{
+  "name": "dsh-read-aloud-neural",
+  "version": "0.6.2",
+  "type": "module",
+  "description": "Read DSH replies aloud with natural neural voices: a sound-wave play button, highlighting of the sentence being spoken, pause and skip, configurable highlight colours, and auto-read. · 用自然神经音色朗读 DSH 回复：音浪播放键、当前句高亮、暂停跳句、自定高亮颜色、自动朗读。",
+  "license": "MIT",
+  "author": "ziyouti",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ziyouti/dsh-read-aloud.git"
+  },
+  "homepage": "https://github.com/ziyouti/dsh-read-aloud#readme",
+  "bugs": {
+    "url": "https://github.com/ziyouti/dsh-read-aloud/issues"
+  },
+  "keywords": [
+    "deepseek",
+    "harness",
+    "dsh",
+    "dsh-plugin",
+    "tts",
+    "text-to-speech",
+    "read-aloud",
+    "neural-voice",
+    "accessibility"
+  ],
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "tts.js",
+    "ws-client.js",
+    "client.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg"
+  ],
+  "dsh": {
+    "bundle": { "patch": "./cordis.patch.yml" },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": ["@deepseek-ai/dsh-client-ui-conversation"]
+    }
+  }
+}
