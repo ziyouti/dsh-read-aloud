@@ -16,7 +16,10 @@
  */
 
 window.__ModuleLoader__.load({
-  id: '@local/dsh-read-aloud',
+  // Must match the package name in package.json: the loader resolves this
+  // bundle by that name, and a stale id makes boot fail with a duplicate
+  // factory registration.
+  id: 'dsh-read-aloud-neural',
   factory(require) {
     const React = require('react')
     const h = React.createElement
@@ -1625,8 +1628,8 @@ window.__ModuleLoader__.load({
 
       ctx.effect(() => {
         const tag = document.createElement('style')
-        tag.dataset.plugin = '@local/dsh-read-aloud'
-        tag.dataset.pluginCss = '@local/dsh-read-aloud/read-aloud.css'
+        tag.dataset.plugin = 'dsh-read-aloud-neural'
+        tag.dataset.pluginCss = 'dsh-read-aloud-neural/read-aloud.css'
         tag.textContent = STYLES
         document.head.appendChild(tag)
         applyHighlightColors()
