@@ -1,10 +1,14 @@
 # dsh-read-aloud-neural
 
-在 DeepSeek Harness 的每条回复旁加一个**音浪按钮**，点击就能听到这条回复。voice 用的是微软 Edge 的在线**神经音色**，比浏览器自带的机器音自然得多。
+在 DeepSeek Harness 的每条回复旁加一个**音浪按钮**，点击就能听到这条回复。语音用的是微软 Edge 的在线**神经音色**，比浏览器自带的机器音自然得多。
 
-朗读时会**高亮当前正在读的那一句**，方便一边听一边跟。
+朗读时会**高亮当前正在读的那一句**，方便一边听一边看。高亮长什么样由你定：**底色、文字颜色、浓淡**三样都能在设置里调。
 
 > Read DSH replies aloud with natural neural voices: a sound-wave play button, highlighting of the sentence being spoken, pause/skip controls, configurable highlight colours, and auto-read.
+
+![朗读时高亮当前句](assets/reading-green.png)
+
+![设置里的音色、高亮底色、文字颜色与浓淡](assets/settings.png)
 
 ## 功能
 
